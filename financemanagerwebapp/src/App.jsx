@@ -7,6 +7,9 @@ import Login from "./pages/login";
 import Signup from "./pages/Signup";
 import Home from "./pages/Home";
 import { Toaster } from "react-hot-toast";
+import LandingPage from "./pages/LandingPage.jsx";
+import { Navigate } from "react-router-dom";
+
 
 const App = () => {
 
@@ -15,6 +18,8 @@ const App = () => {
     <>
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Root />} />
+        <Route path="/home" element={<LandingPage />} />
         <Route path="/dashboard" element={<Home />}/>
         <Route path="/income" element={<Income />}/>
         <Route path="/expense" element={<Expense />}/>
@@ -31,6 +36,16 @@ const App = () => {
 
 
   )
+}
+
+const Root = () => {
+    const isAuthenticated = !!localStorage.getItem("token");
+    return isAuthenticated ? (
+        <Navigate to="/dashboard" />
+    ) : (
+      <Navigate to="/home" />
+    );
+
 }
 
 export default App;
