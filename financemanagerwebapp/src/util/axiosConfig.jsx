@@ -29,7 +29,7 @@ if (!shouldSkipToken) {
     const accessToken = localStorage.getItem("token");
     if (accessToken){
 
-        config.headers.Authrization = `Bearer ${accessToken}`;
+        config.headers.Authorization = `Bearer ${accessToken}`;
     }
 }
 
