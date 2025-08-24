@@ -21,9 +21,11 @@ const CategoryList = ({categories, onEditCategory}) => {
                             {/* Icon/Emoji disply*/}
                             <div className="w-12 h-12 flex items-center justify-center text-xl text-gray-800 bg-gray-100 rounded-full">
                                 {category.icon ? (
-                                    <span className="text-2xl">
-                                        <img src={category.icon} alt={category.name} className="h-5 w-5" />
-                                    </span>
+                                    <img 
+                                    src={category.icon} 
+                                    alt={category.name} 
+                                    className="h-8 w-8 object-contain" // makes it visible + consistent size
+                                    />
                                 ): (
                                     <Layers2 className="text-purple-800" size={24} />
                                 )}
