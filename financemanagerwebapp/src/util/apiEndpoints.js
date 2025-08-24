@@ -1,6 +1,6 @@
-// export const BASE_URL = "https://fintrack-8r77.onrender.com/api/v1.0/";
+export const BASE_URL = "https://fintrack-8r77.onrender.com/api/v1.0/";
 
-export const BASE_URL = "http://localhost:8080/api/v1.0/";
+// export const BASE_URL = "http://localhost:8080/api/v1.0/";
 const CLOUDINARY_CLOUD_NAME = "dnxe6kj7z";
 
 export const API_ENDPOINTS = {
